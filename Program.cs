@@ -1,3 +1,6 @@
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using Library2026.Areas.Identity.Data;
 namespace Library2026
 {
     public class Program
@@ -5,6 +8,11 @@ namespace Library2026
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+            var connectionString = builder.Configuration.GetConnectionString("LibraryContextConnection") ?? throw new InvalidOperationException("Connection string 'LibraryContextConnection' not found.");
+
+            builder.Services.AddDbContext<LibraryContext>(options => options.UseSqlServer(connectionString));
+
+            builder.Services.AddDefaultIdentity<LibraryUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<LibraryContext>();
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
