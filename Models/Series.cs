@@ -4,7 +4,7 @@
     {
         public int SeriesID { get; set; }
         public string SeriesName { get; set; }
-        public double SeriesNumbers { get; set; }
+        public double SeriesLength { get; set; }
         
     }
 }
