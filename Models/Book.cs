@@ -18,6 +18,7 @@
         public ICollection<AuthorBook> AuthorBooks { get; set; }
         public ICollection<GenreBook> GenreBooks { get; set; }
         public ICollection<SeriesBook> SeriesBooks { get; set; }
+        public ICollection<UserBook> UserBooks { get; set; }
 
 
     }

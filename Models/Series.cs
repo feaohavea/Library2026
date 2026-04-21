@@ -5,7 +5,7 @@
         public int SeriesID { get; set; }
         public string SeriesName { get; set; }
 
-        public ICollection<AuthorBook> AuthorBooks { get; set; }
+        public ICollection<SeriesBook> SeriesBooks { get; set; }
 
     }
 }
