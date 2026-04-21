@@ -15,6 +15,8 @@
         public string Description { get; set; }
         public int LocationID { get; set; } // Shelf location
 
+        public ICollection<AuthorBook> AuthorBooks { get; set; }
+
 
     }
 }

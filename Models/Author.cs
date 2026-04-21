@@ -5,8 +5,8 @@
         public int AuthorID { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public string AuthorCode { get; set; }
+        public string Abbreviaton { get; set; }
 
-        public ICollection<Book> Books { get; set; }
+        public ICollection<AuthorBook> AuthorBooks { get; set; }
     }
 }
