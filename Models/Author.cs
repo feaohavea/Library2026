@@ -1,4 +1,7 @@
-﻿namespace Library2026.Models
+﻿using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations;
+
+namespace Library2026.Models
 {
     public class Author
     {

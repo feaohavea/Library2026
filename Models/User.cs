@@ -1,4 +1,6 @@
-﻿namespace Library2026.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Library2026.Models
 {
     public class User
     {
