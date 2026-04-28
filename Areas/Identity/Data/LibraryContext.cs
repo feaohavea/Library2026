@@ -22,4 +22,20 @@ public class LibraryContext : IdentityDbContext<LibraryUser>
     }
 
 public DbSet<Library2026.Models.Book> Book { get; set; } = default!;
+
+public DbSet<Library2026.Models.Author> Author { get; set; } = default!;
+
+public DbSet<Library2026.Models.Series> Series { get; set; } = default!;
+
+public DbSet<Library2026.Models.Genre> Genre { get; set; } = default!;
+
+public DbSet<Library2026.Models.User> User { get; set; } = default!;
+
+public DbSet<Library2026.Models.AuthorBook> AuthorBook { get; set; } = default!;
+
+public DbSet<Library2026.Models.GenreBook> GenreBook { get; set; } = default!;
+
+public DbSet<Library2026.Models.SeriesBook> SeriesBook { get; set; } = default!;
+
+public DbSet<Library2026.Models.UserBook> UserBook { get; set; } = default!;
 }
