@@ -17,10 +17,7 @@ public class LibraryContext : IdentityDbContext<LibraryUser>
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         //base.OnModelCreating(builder);
-        modelBuilder.Entity<AuthorBook>().ToTable(nameof(Author));
-        modelBuilder.Entity<GenreBook>().ToTable(nameof(GenreBook));
-        modelBuilder.Entity<SeriesBook>().ToTable(nameof(SeriesBook));
-        modelBuilder.Entity<UserBook>().ToTable(nameof(UserBook));
+        
         modelBuilder.Entity<Book>().ToTable(nameof(Book));
         modelBuilder.Entity<Author>().ToTable(nameof(Author));
         modelBuilder.Entity<Series>().ToTable(nameof(Series));
@@ -29,6 +26,20 @@ public class LibraryContext : IdentityDbContext<LibraryUser>
         // Customize the ASP.NET Identity model and override the defaults if needed.
         // For example, you can rename the ASP.NET Identity table names and more.
         // Add your customizations after calling base.OnModelCreating(builder);
+
+        modelBuilder.Entity<AuthorBook>()
+            .HasKey(ab => new { ab.AuthorID, ab.BookID });
+        modelBuilder.Entity<GenreBook>()
+            .HasKey(gb => new { gb.GenreID, gb.BookID });
+        modelBuilder.Entity<SeriesBook>()
+            .HasKey(sb => new { sb.SeriesID, sb.BookID });
+        modelBuilder.Entity<UserBook>()
+            .HasKey(ub => new { ub.UserID, ub.BookID });
+
+        /*modelBuilder.Entity<AuthorBook>().ToTable(nameof(Author));
+        modelBuilder.Entity<GenreBook>().ToTable(nameof(GenreBook));
+        modelBuilder.Entity<SeriesBook>().ToTable(nameof(SeriesBook));
+        modelBuilder.Entity<UserBook>().ToTable(nameof(UserBook));*/
     }
 
 public DbSet<Library2026.Models.Book> Book { get; set; } = default!;
