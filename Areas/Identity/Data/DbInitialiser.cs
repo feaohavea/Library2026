@@ -82,7 +82,8 @@
                 new Models.GenreBook() { BookID = 10, GenreID = 4 },
             };
 
-            var Series = new Library2026.Models.Series() {
+            var Series = new Library2026.Models.Series() 
+            {
                 SeriesName = "The Lord of the Rings",
             };
 
@@ -112,12 +113,17 @@
                     Password = "barkbarkbark123"
                 },
 
-
-
-
             };
 
+            var UserBooks = new Library2026.Models.UserBook[] { 
+            
+                new Models.UserBook () { BookID = 1, UserID = 1 },
+                
+                new Models.UserBook () { BookID = 8, UserID = 1 },
 
+                new Models.UserBook () { BookID = 9, UserID = 1 },
+
+            };
 
 
         }
