@@ -66,7 +66,56 @@
                 new Models.Genre() {GenreName = "Horror" },
                 new Models.Genre() {GenreName = "Thriller" },
 
-            }
+            };
+           
+            var genreBooks = new Library2026.Models.GenreBook[]
+            {
+                new Models.GenreBook() { BookID = 1, GenreID = 5 },
+                new Models.GenreBook() { BookID = 2, GenreID = 2 },
+                new Models.GenreBook() { BookID = 3, GenreID = 4 },
+                new Models.GenreBook() { BookID = 4, GenreID = 4 },
+                new Models.GenreBook() { BookID = 5, GenreID = 4 },
+                new Models.GenreBook() { BookID = 6, GenreID = 1 },
+                new Models.GenreBook() { BookID = 7, GenreID = 2 },
+                new Models.GenreBook() { BookID = 8, GenreID = 5 },
+                new Models.GenreBook() { BookID = 9, GenreID = 5 },
+                new Models.GenreBook() { BookID = 10, GenreID = 4 },
+            };
+
+            var Series = new Library2026.Models.Series() {
+                SeriesName = "The Lord of the Rings",
+            };
+
+            var SeriesBooks = new Library2026.Models.SeriesBook[]
+            {
+                new Models.SeriesBook() { BookID = 1, SeriesID = 1 },
+                new Models.SeriesBook() { BookID = 8, SeriesID = 1 },
+            };
+
+            var Users = new Library2026.Models.User[]
+            {
+                new Models.User ()
+                {
+                    FirstName = "Meow",
+                    LastName = "Meow",
+                    Email = "meow@meow.com",
+                    Username = "meow",
+                    Password = "meowmeowmeow123"
+                },
+
+                new Models.User ()
+                {
+                    FirstName = "Bark",
+                    LastName = "Bark",
+                    Email = "bark@bark.com",
+                    Username = "bark",
+                    Password = "barkbarkbark123"
+                },
+
+
+
+
+            };
 
 
 
